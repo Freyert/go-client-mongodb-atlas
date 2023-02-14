@@ -60,17 +60,17 @@ type CloudProviderSnapshotBackupPolicy struct {
 
 // Policy represents for the snapshot and an array of backup policy items.
 type Policy struct {
-	ID          string       `json:"id,omitempty"`          // Unique identifier of the backup policy.
+	ID          *string      `json:"id,omitempty"`          // Unique identifier of the backup policy.
 	PolicyItems []PolicyItem `json:"policyItems,omitempty"` // A list of specifications for a policy.
 }
 
 // PolicyItem represents a specifications for a backup policy.
 type PolicyItem struct {
-	ID                string `json:"id,omitempty"`                // Unique identifier of the backup policy item.
-	FrequencyInterval int    `json:"frequencyInterval,omitempty"` // Desired frequency of the new backup policy item specified by frequencyType.
-	FrequencyType     string `json:"frequencyType,omitempty"`     // Frequency associated with the backup policy item. One of the following values: hourly, daily, weekly or monthly.
-	RetentionUnit     string `json:"retentionUnit,omitempty"`     // Metric of duration of the backup policy item: days, weeks, or months.
-	RetentionValue    int    `json:"retentionValue,omitempty"`    // Duration for which the backup is kept. Associated with retentionUnit.
+	ID                *string `json:"id,omitempty"`                // Unique identifier of the backup policy item.
+	FrequencyInterval int     `json:"frequencyInterval,omitempty"` // Desired frequency of the new backup policy item specified by frequencyType.
+	FrequencyType     string  `json:"frequencyType,omitempty"`     // Frequency associated with the backup policy item. One of the following values: hourly, daily, weekly or monthly.
+	RetentionUnit     string  `json:"retentionUnit,omitempty"`     // Metric of duration of the backup policy item: days, weeks, or months.
+	RetentionValue    int     `json:"retentionValue,omitempty"`    // Duration for which the backup is kept. Associated with retentionUnit.
 }
 
 // Export represents a policy for automatically exporting cloud backup snapshots to AWS bucket.

@@ -143,33 +143,33 @@ func TestCloudProviderSnapshotBackupPolicies_Get(t *testing.T) {
 		NextSnapshot: "2020-01-28T05:24:25Z",
 		Policies: []Policy{
 			{
-				ID: "5e2f1bcaf38990fab9227b8",
+				ID: pointy.String("5e2f1bcaf38990fab9227b8"),
 				PolicyItems: []PolicyItem{
 					{
 						FrequencyInterval: 6,
 						FrequencyType:     "hourly",
-						ID:                "5e2f1cc8105eef6d6bd9005b",
+						ID:                pointy.String("5e2f1cc8105eef6d6bd9005b"),
 						RetentionUnit:     "days",
 						RetentionValue:    7,
 					},
 					{
 						FrequencyInterval: 1,
 						FrequencyType:     "daily",
-						ID:                "5e2f1cc8105eef6d6bd9005c",
+						ID:                pointy.String("5e2f1cc8105eef6d6bd9005c"),
 						RetentionUnit:     "days",
 						RetentionValue:    7,
 					},
 					{
 						FrequencyInterval: 6,
 						FrequencyType:     "weekly",
-						ID:                "5e2f1cc8105eef6d6bd9005d",
+						ID:                pointy.String("5e2f1cc8105eef6d6bd9005d"),
 						RetentionUnit:     "weeks",
 						RetentionValue:    4,
 					},
 					{
 						FrequencyInterval: 40,
 						FrequencyType:     "monthly",
-						ID:                "5e2f1cc8105eef6d6bd9005e",
+						ID:                pointy.String("5e2f1cc8105eef6d6bd9005e"),
 						RetentionUnit:     "months",
 						RetentionValue:    12,
 					},
@@ -350,17 +350,17 @@ func TestCloudProviderSnapshotBackupPolicies_Update(t *testing.T) {
 		ReferenceMinuteOfHour: pointy.Int64(30),
 		Policies: []Policy{
 			{
-				ID: "5c95242c87d9d636e70c28ef",
+				ID: pointy.String("5c95242c87d9d636e70c28ef"),
 				PolicyItems: []PolicyItem{
 					{
-						ID:                "5c95242c87d9d636e70c28f0",
+						ID:                pointy.String("5c95242c87d9d636e70c28f0"),
 						FrequencyType:     "hourly",
 						FrequencyInterval: 6,
 						RetentionValue:    2,
 						RetentionUnit:     "days",
 					},
 					{
-						ID:                "5c95242c87d9d636e70c28f2",
+						ID:                pointy.String("5c95242c87d9d636e70c28f2"),
 						FrequencyType:     "weekly",
 						FrequencyInterval: 1,
 						RetentionValue:    3,
@@ -404,19 +404,19 @@ func TestCloudProviderSnapshotBackupPolicies_Update(t *testing.T) {
 		NextSnapshot: "2019-04-03T18:30:08Z",
 		Policies: []Policy{
 			{
-				ID: "5c95242c87d9d636e70c28ef",
+				ID: pointy.String("5c95242c87d9d636e70c28ef"),
 				PolicyItems: []PolicyItem{
 					{
 						FrequencyInterval: 6,
 						FrequencyType:     "hourly",
-						ID:                "5c95242c87d9d636e70c28f0",
+						ID:                pointy.String("5c95242c87d9d636e70c28f0"),
 						RetentionUnit:     "days",
 						RetentionValue:    2,
 					},
 					{
 						FrequencyInterval: 1,
 						FrequencyType:     "weekly",
-						ID:                "5c95242c87d9d636e70c28f2",
+						ID:                pointy.String("5c95242c87d9d636e70c28f2"),
 						RetentionUnit:     "weeks",
 						RetentionValue:    3,
 					},
@@ -530,7 +530,7 @@ func TestCloudProviderSnapshotBackupPolicies_Delete(t *testing.T) {
 		NextSnapshot: "2020-01-28T05:24:25Z",
 		Policies: []Policy{
 			{
-				ID:          "5e2f1bcaf38990fab9227b8",
+				ID:          pointy.String("5e2f1bcaf38990fab9227b8"),
 				PolicyItems: []PolicyItem{},
 			},
 		},
